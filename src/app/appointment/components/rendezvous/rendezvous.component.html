@@ -1,7 +1,7 @@
 <app-header></app-header>
 <mat-card>
   <mat-card-content>
-<form [formGroup]="rendzevousForm" (ngSubmit)="openDialog()" >
+<form [formGroup]="rendezvousForm" (ngSubmit)="openDialog()" >
  
     <mat-form-field class="full-width-input">
       <input
@@ -15,7 +15,7 @@
       </mat-error>
     </mat-form-field>
     <label for="comment" >Commentaire</label>
-    <textarea  id="comment"  cols="30" rows="10"></textarea>
+    <textarea  id="comment"  cols="30" rows="10" formControlName="commentaire"></textarea>
     
 
   
@@ -44,17 +44,9 @@
         Veillez saisir une date
       </mat-error>
     </mat-form-field>
-    <div class="form-group">
-      <label for="agent">
-        Agent
-      </label>
-      <select formControlName="agent" class="form-control">
-        <option *ngFor="let agt of agents " [ngValue]="agent">
-          {{ agent.name }}
-        </option>
-      </select>
-    </div>
-  
+    <button mat-button class="blueButton" (click)="reset()">
+      Rénitialiser
+    </button>
     <button mat-raised-button class="btn btn-primary">Envoyer</button>
   </form>
   </mat-card-content>

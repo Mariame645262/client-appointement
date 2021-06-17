@@ -9,20 +9,23 @@ import { AccountModule } from './account/account.module';
 import { TransferModule } from './transfer/transfer.module';
 import { AuthentificationModule } from './authentification/authentification.module';
 import { BasicAuthHtppInterceptorService } from './authentification/services/basic-auth-http-interceptor.service';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ConfirmationDialogComponent } from './shared/components/confirmation-dialog/confirmation-dialog.component';
 import { RechargeModule } from './recharge/recharge.module';
+import { appointmentModule } from './appointment/appointment.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AccountModule,
     TransferModule,
     AuthentificationModule,
     RechargeModule,
+    appointmentModule,
   ],
   providers: [
     {

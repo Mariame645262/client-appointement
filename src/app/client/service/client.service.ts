@@ -4,6 +4,7 @@ import { Account } from 'src/app/account/model/account';
 import { HttpClient } from '@angular/common/http';
 import { Client } from '../model/client';
 import { Operator } from 'src/app/shared/models/operator';
+import { Agent } from 'http';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +18,8 @@ export class ClientService {
   public findClientAccounts(id: string): Observable<Account[]> {
     return this.http.get<Account[]>(this.clientUrl + '/' + id + '/comptes');
   }
+
+  
 
   public findOperators(): Observable<Operator[]> {
     return this.http.get<Operator[]>('http://localhost:8081/operateurs');
