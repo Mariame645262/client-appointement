@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Agence } from '../model/agence.model';
 import { Rendezvous } from '../model/rendezvous.model';
 
 @Injectable({
@@ -18,7 +17,5 @@ export class AppointmentService {
     return this.http.post<Rendezvous>(this.rendezvousUrl , rendezvous);
   }
 
-  /*public findClientAccounts(id: string): Observable<[]> {
-    return this.http.get<Account[]>(this.clientUrl + '/' + id + '/comptes');
-  }*/
+  
 }

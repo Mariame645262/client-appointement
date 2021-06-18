@@ -12,7 +12,8 @@ import { BasicAuthHtppInterceptorService } from './authentification/services/bas
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ConfirmationDialogComponent } from './shared/components/confirmation-dialog/confirmation-dialog.component';
 import { RechargeModule } from './recharge/recharge.module';
-import { appointmentModule } from './appointment/appointment.module';
+import { appointmentModule } from './appointmentclient/appointment.module';
+
 
 @NgModule({
   declarations: [AppComponent],

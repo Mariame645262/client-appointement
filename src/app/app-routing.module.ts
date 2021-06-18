@@ -7,8 +7,7 @@ import { TransferListComponent } from './transfer/components/transfer-list/trans
 import { TransferDoneComponent } from './transfer/components/transfer-done/transfer-done.component';
 import { RechargeFormComponent } from './recharge/components/recharge-form/recharge-form.component';
 import { AuthGuardService } from './authentification/services/auth-guard.service';
-import { RendezvousComponent } from './appointment/components/rendezvous/rendezvous.component';
-
+import { RendezvousComponent } from './appointmentclient/components/rendezvous/rendezvous.component';
 
 const routes: Routes = [
   {
@@ -24,7 +23,6 @@ const routes: Routes = [
   {
     path: 'overview',
     component: AccountSummaryComponent,
-    canActivate: [AuthGuardService],
   },
   {
     path: 'compte/:id/virementForm',
@@ -36,10 +34,6 @@ const routes: Routes = [
     component: TransferListComponent,
     canActivate: [AuthGuardService],
   },
-  {
-  path: 'compte/:id/rendezvousForm',
-  component: RendezvousComponent,
-  },
 
   {
     path: 'virementEffectue/:id',
@@ -47,10 +41,15 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
+    path: 'compte/:id/rendezvous',  
+    component: RendezvousComponent,
+  },
+  {
     path: 'compte/:id/rechargeForm',
     component: RechargeFormComponent,
     canActivate: [AuthGuardService],
   },
+
 ];
 
 @NgModule({

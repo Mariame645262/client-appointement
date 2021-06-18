@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Rendezvous } from '../../model/rendezvous.model';
-import { Agence } from '../../model/agence.model';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppointmentService } from '../../service/appointment.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -55,7 +54,6 @@ get commentaire() {
     console.log(this.rendezvous);
     this.rendezvousService
       .save(this.rendezvous);
-    
   }
 
   reset() {
